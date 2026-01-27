@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const Alert = {};
+
 interface Props{
     items:string[];
     heading:string;
@@ -8,7 +10,7 @@ interface Props{
 
 function ListGroup( {items, heading,onSelectItem}: Props) {
 
-
+ 
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
