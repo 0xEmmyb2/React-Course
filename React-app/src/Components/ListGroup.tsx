@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Alert = {};
+
 
 interface Props{
     items:string[];
