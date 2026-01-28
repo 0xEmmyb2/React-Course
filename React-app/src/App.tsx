@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div>
-      {alertVisible &&<Alert>Hello World</Alert>}
+      {alertVisible &&<Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>}
       <Button  onClick ={() => setAlertVisibility(true) }>Submit</Button>
       <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
     </div>
