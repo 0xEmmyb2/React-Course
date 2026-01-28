@@ -14,6 +14,7 @@ interface ListItemProps {
 
 const ListItem = styled.li<ListItemProps>`
 padding: 5px 0;
+background: ${props => props.active ? 'blue' : 'none'};
 `
 interface Props{
     items:string[];
