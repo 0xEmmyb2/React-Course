@@ -64,11 +64,12 @@ function App() {
   };
 
   const handlePrice = () => {
-    const newDrink = {
-      ...drink,
-      price : drink.price + 1
-    }
-    setDrink(newDrink);
+    // const newDrink = {
+    //   ...drink,
+    //   price : drink.price + 1
+    // }
+    // setDrink(newDrink);
+    setDrink({...drink, price: drink.price + 1});
   };
 
   return (
