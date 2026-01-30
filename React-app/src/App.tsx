@@ -71,8 +71,9 @@ function App() {
     // setDrink(newDrink);
     if (drink.price < 100){
       setDrink({...drink, price: drink.price + 1});
+    } else {
+      alert("Maximum price reached!!");
     }
-    alert("Maximum price reached!!");
   };
 
   return (
