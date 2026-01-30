@@ -16,6 +16,10 @@ function App() {
 
   const [tags, setTags] = useState(['happy', 'exciting']);
   
+  const [drink, setDrink] = useState({
+    title: 'Americano',
+    price: 6
+  });
 
   const [customer, setCustomer] = useState({
     name: "John",
