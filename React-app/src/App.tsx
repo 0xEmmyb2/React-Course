@@ -13,7 +13,8 @@ function App() {
     { id: 1, title: "Bug 1", fixed: false },
     { id: 2, title: "Bug 2", fixed: false },
   ]);
-
+  
+  
   const [customer, setCustomer] = useState({
     name: "John",
     address: {
@@ -27,12 +28,12 @@ function App() {
     console.log(item);
   };
 
-  // const handleEvent = () => {
-  //   setCustomer({
-  //     ...customer,
-  //     address: { ...customer.address, zipCode: 94112 },
-  //   });
-  // };
+  const handleEvent = () => {
+    setCustomer({
+      ...customer,
+      address: { ...customer.address, zipCode: 94112 },
+    });
+  };
 
   const handleClick = () => {
     // setBugs(bugs.map(bug => bug.id === 1 ? { ...bug, fixed: true}))
