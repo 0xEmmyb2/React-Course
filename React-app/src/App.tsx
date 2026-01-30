@@ -67,7 +67,7 @@ function App() {
   const handlePrice = () => {
     const newDrink = {
       title: drink.title,
-      price : 6
+      price : drink.price + 1
     }
     setDrink(newDrink);
   };
@@ -89,9 +89,9 @@ function App() {
           {bug.title} {bug.fixed ? "fixed" : "New"}
         </p>
       ))}
-      <button onClick={handleClick}>Click Me</button>
-      <Message />
-      <button onClick={handlePrice}></button>
+      <button onClick={handleClick}>Click Me</button> <br /> <br />
+      {drink.price}
+      <button onClick={handlePrice}>Change Price</button>
     </div>
   );
 }
