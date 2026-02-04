@@ -1,10 +1,17 @@
 import React from 'react'
 
-interface Props {}
+interface Props {
+    cartItems: string []
+}
 
-const Cart = () => {
+const Cart = ({cartItems}: Props) => {
   return (
+    <>
     <div>Cart</div>
+    <ul>
+        {cartItems.map(item => <li key={item}></li>)}
+    </ul>
+    </>
   )
 }
 
