@@ -56,7 +56,9 @@ function App() {
     console.log(item);
   };
 
-  const handleQuantity = () => {};
+  const handleQuantity = () => {
+    setCart({...cart, items: [quantity: cart.it]});
+  };
 
   const handlePizza = () => {
     setPizza({...pizza, toppings: [...pizza.toppings, 'Cheese']})
