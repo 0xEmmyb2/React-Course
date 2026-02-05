@@ -48,7 +48,9 @@ function App() {
     console.log(item);
   };
 
-  const handlePizza = () => {};
+  const handlePizza = () => {
+    setPizza({...pizza, toppings: [...pizza.toppings, 'Tailwind']})
+  };
 
   const handleEvent = () => {
     setCustomer({
