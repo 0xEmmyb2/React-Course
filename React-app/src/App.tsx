@@ -147,7 +147,7 @@ function App() {
       <button onClick={handleClick}>Click Me</button> <br /> <br />
       {drink.price}
       <button onClick={handlePrice}>Change Price</button>
-      <ExpandableText>
+      <ExpandableText maxChars={10}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
         consequatur necessitatibus sint, voluptatum libero rerum eius enim
         similique assumenda maiores unde vel natus illo consequuntur
