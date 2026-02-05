@@ -6,4 +6,4 @@ const ExpandableText = () => {
   )
 }
 
-export default ExpandableText
+export default ExpandableText;
