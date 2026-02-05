@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ExpandableText = () => {
+interface Props {
+  children: string;
+}
+
+const ExpandableText = ({children}: Props) => {
   return (
-    <div></div>
+    <div>{children}</div>
   )
 }
 
