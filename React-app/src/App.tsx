@@ -140,7 +140,6 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
-      <Form/>
       {bugs.map((bug) => (
         <p key={bug.id}>
           {bug.title} {bug.fixed ? "fixed" : "New"}
@@ -162,6 +161,7 @@ function App() {
         temporibus pariatur excepturi, reiciendis error reprehenderit quidem
         veritatis in ex autem numquam et dolores voluptate, eos dolor natus?
       </ExpandableText>
+      <Form/>
     </div>
   );
 }
