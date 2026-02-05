@@ -23,6 +23,11 @@ function App() {
       name:'John',
     },
   });
+
+  const [pizza, setPizza] = useState({
+    name: 'Spicy Pepperoni',
+    toppings: ['Mushroom']
+  });
   
   const [drink, setDrink] = useState({
     title: 'Americano',
