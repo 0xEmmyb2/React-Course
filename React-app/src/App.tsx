@@ -22,7 +22,7 @@ function App() {
     player: {
       name:'John',
     },
-  })
+  });
   
   const [drink, setDrink] = useState({
     title: 'Americano',
