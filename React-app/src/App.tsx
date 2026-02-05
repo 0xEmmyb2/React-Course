@@ -7,6 +7,7 @@ import { useState } from "react";
 import { BsFillCalendarFill } from "react-icons/bs";
 import { produce } from "immer";
 import ExpandableText from "./Components/ExpandableText";
+import Form from "./Components/Form";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -139,6 +140,7 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
+      <Form/>
       {bugs.map((bug) => (
         <p key={bug.id}>
           {bug.title} {bug.fixed ? "fixed" : "New"}
