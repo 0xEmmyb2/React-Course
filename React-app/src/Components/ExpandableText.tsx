@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExpandableText = () => {
   return (
-    <div>ExpandableText</div>
+    <div></div>
   )
 }
 
