@@ -42,7 +42,7 @@ const Form = () => {
           Name
         </label>
         <input
-        {...register("name", {required: true, minLength: {value: 3, message: "Minimum length is 3(three) characters"}})}
+        {...register("name", {required: true, minLength: {value: 3, message: "Name must be atleast three(3) characters."}})}
         //   onChange={(event) =>
         //     setPerson({ ...person, name: event.target.value })
         //   }
@@ -51,13 +51,15 @@ const Form = () => {
           type="text"
           className={`form-control ${errors.name ? "is-invalid" : ""}`}
         />
+        {/* This is the message block after conquering an error*/}
+        {errors.name && <p className='text-danger'>{errors.name.message}</p>}
       </div>
       <div className="mb-3">
         <label htmlFor="age" className="form-label">
           Age
         </label>
         <input
-        {...register("age", {required: "Age is required", min: 18})}
+        {...register("age", {required: "Age is required", min: {value: 18, message: "You must be 18 years or older."}})}
         //   onChange={(event) =>
         //     setPerson({ ...person, age: event.target.value })
         //   }
