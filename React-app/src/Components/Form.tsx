@@ -3,7 +3,7 @@ import { FormEvent, useState } from "react";
 const Form = () => {
   const [person, setPerson] = useState({
     name: "",
-    age: 0,
+    age: '',
   });
   //   const nameRef = useRef<HTMLInputElement>(null);
   //   const ageRef = useRef<HTMLInputElement>(null);
@@ -25,6 +25,7 @@ const Form = () => {
           onChange={(event) =>
             setPerson({ ...person, name: event.target.value })
           }
+          value={person.name}
           id="name"
           type="text"
           className="form-control"
@@ -36,8 +37,9 @@ const Form = () => {
         </label>
         <input
           onChange={(event) =>
-            setPerson({ ...person, age: parseInt(event.target.value) })
+            setPerson({ ...person, age: event.target.value })
           }
+          value={person.age}
           id="age"
           type="number"
           className="form-control"
