@@ -51,7 +51,7 @@ const Form = () => {
           type="text"
           className={`form-control ${errors.name ? "is-invalid" : ""}`}
         />
-        {/* This is the message block after conquering an error*/}
+        {/* This is the message block after conquering an invalid name error*/}
         {errors.name && <p className='text-danger'>{errors.name.message}</p>}
       </div>
       <div className="mb-3">
@@ -68,6 +68,7 @@ const Form = () => {
           type="number"
           className={`form-control ${errors.age ? "is-invalid" : ""}`}
         />
+        {/* This is the message error for the invalid age input */}
       </div>
       <button className="btn btn-primary" type="submit">
         Submit
