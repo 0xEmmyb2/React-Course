@@ -13,7 +13,7 @@ const Form = () => {
     // if (nameRef.current !== null) person.name = nameRef.current.value;
     // if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
 
-    // console.log(person); //This is when we use basic useRef
+     console.log(person); 
   };
   return (
     <form onSubmit={handleSubmit}>
