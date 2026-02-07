@@ -156,6 +156,7 @@ function App() {
       ))}
       {/* Button that works with the bugs */}
       <button onClick={handleClick}>Click Me</button> <br /> <br />
+      {/* The handle price buttons section */}
       {drink.price}
       <button onClick={handlePrice}>Change Price</button>
       <ExpandableText maxChars={10}>
