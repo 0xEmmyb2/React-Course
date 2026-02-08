@@ -5,8 +5,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 //Schema validation
 const schema =z.object({
-    name: z.string().min(3),
-    age: z.number().min(18)
+    name: z.string().min(3 , { message: 'Name must be atleast 3 character(s)'}),
+    age: z.number().min(18, { message})
 });
 
 type FormData = z.infer<typeof schema>
