@@ -69,7 +69,7 @@ const Form = () => {
           Age
         </label>
         <input
-        {...register("age")}
+        {...register("age", { valueAsNumber: true})}
         /*
         onChange={(event) =>
             setPerson({ ...person, age: event.target.value })
