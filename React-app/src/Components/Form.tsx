@@ -20,7 +20,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState : {errors}
-  } = useForm<FormData>(resolver: zodResolver(schema));
+  } = useForm<FormData>({resolver: zodResolver(schema)});
 
   //Function runs if validation passes
   const onSubmit = (data: FormData) => {
