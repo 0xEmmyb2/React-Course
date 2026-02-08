@@ -31,7 +31,7 @@ const Form = () => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
      if (nameRef.current !== null) person.name = nameRef.current.value;
-    if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
+    // if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
 
      console.log(person); 
   };
