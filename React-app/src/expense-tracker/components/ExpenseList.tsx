@@ -1,5 +1,4 @@
 import React from 'react';
-import { tr } from 'zod/locales';
 
 interface Expense{
     id: number;
