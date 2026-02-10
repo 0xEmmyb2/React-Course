@@ -98,6 +98,7 @@ const Form = () => {
         Submit
       </button>
       {/* Changing the text dynamically */}
+      {!isSubmitting? "Submitting ..." : "Submit"}
     </form>
   );
 };
