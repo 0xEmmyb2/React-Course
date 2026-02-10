@@ -94,8 +94,12 @@ const Form = () => {
         {/* This is the message error for the invalid age input */}
         {errors.age && <p className="text-danger">{errors.age.message}</p>}
       </div>
-      <button disabled={!isValid || isSubmitting} className="btn btn-primary" type="submit">
-        {!isSubmitting? "Submitting ..." : "Submit"};
+      <button
+        disabled={!isValid || isSubmitting}
+        className="btn btn-primary"
+        type="submit"
+      >
+        {isSubmitting ? "Submitting..." : "Submit"}
       </button>
     </form>
   );
