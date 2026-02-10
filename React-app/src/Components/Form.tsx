@@ -1,13 +1,11 @@
-import { useForm , FieldValues} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 //Schema validation
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be atleast 3 character(s)" }),
-  age: z.coerce
-    .number()
-    .min(18, { message: "You must be 18 years or older" }),
+  age: z.number().min(18, { message: "You must be 18 years or older" }),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -22,7 +20,7 @@ const Form = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   //Function runs if validation passes
-  const onSubmit = (data : FieldValues) => {
+  const onSubmit = (data: FormData) => {
     console.log("Form submitted successfully:", data);
   };
 
@@ -68,7 +66,7 @@ const Form = () => {
           Age
         </label>
         <input
-          {...register("age")}
+          {...register("age", { valueAsNumber: true })}
           /*
         onChange={(event) =>
             setPerson({ ...person, age: event.target.value })
