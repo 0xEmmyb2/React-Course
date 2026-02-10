@@ -92,7 +92,7 @@ const Form = () => {
         {/* This is the message error for the invalid age input */}
         {errors.age && <p className="text-danger">{errors.age.message}</p>}
       </div>
-      <button className="btn btn-primary" type="submit">
+      <button disabled={!isValid} className="btn btn-primary" type="submit">
         Submit
       </button>
     </form>
