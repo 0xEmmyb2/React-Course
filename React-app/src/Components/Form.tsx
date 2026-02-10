@@ -26,8 +26,8 @@ const Form = () => {
     //Initialization of the hook
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+    formState: { errors, isValid},
+  } = useForm<FormData>({ resolver: zodResolver(schema), mode: 'onChange' });
 
   //Function runs if validation passes
   const onSubmit = (data: FormData) => {
