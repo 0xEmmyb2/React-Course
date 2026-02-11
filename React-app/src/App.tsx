@@ -132,14 +132,14 @@ function App() {
     }
   };
 
-  const expenses = [
+  const [expenses,setExpenses]= useState ([
     {id: 1, description: 'Saucepan', amount: 10, category: 'Utilities'},
     {id: 2, description: 'Vegetables', amount: 20, category: 'Groceries'}
-  ]
+  ]);
 
   return (
     <div>
-      <ExpenseList expenses={expenses} onDelete={(id) => console.log('Delete', id)}/>
+      <ExpenseList expenses={expenses} onDelete={(id) => setExpenses(expenses.filter((e) => e.id !== id))}/>
       <BsFillCalendarFill /> {/*The use of icons*/}
       <NavBar cartItemsCount={cartItems.length} />
       {/* The cart on the navigation bar and has clear button */}
