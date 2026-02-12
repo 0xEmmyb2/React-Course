@@ -1,9 +1,5 @@
 import { categories } from "../../App";
-import { zodResolver } from "@hookform/resolvers/zod";
 
-const Form = () => {
-    const {}
-}
 
 const ExpenseForm = () => {
   return (
