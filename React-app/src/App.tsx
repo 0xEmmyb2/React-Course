@@ -11,7 +11,7 @@ import Form from "./Components/Form";
 import ExpenseList from "./expense-tracker/components/ExpenseList";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
 
-
+const categories = ["Groceries", "Utilities", "Entertainment"];
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
