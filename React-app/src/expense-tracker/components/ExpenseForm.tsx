@@ -1,4 +1,9 @@
 import { categories } from "../../App";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const Form = () => {
+    const {}
+}
 
 const ExpenseForm = () => {
   return (
@@ -22,6 +27,7 @@ const ExpenseForm = () => {
             {categories.map(category => <option key={category} value={category}>{category}</option>)}
         </select>
       </div>
+      <button className="btn btn-primary">Submit</button>
     </form>
   );
 };
