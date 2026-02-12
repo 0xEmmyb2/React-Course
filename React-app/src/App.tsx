@@ -10,6 +10,7 @@ import ExpandableText from "./Components/ExpandableText";
 import Form from "./Components/Form";
 import ExpenseList from "./expense-tracker/components/ExpenseList";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
+import ExpenseForm from "./expense-tracker/components/ExpenseForm";
 
 export const categories = ["Groceries", "Utilities", "Entertainment"];
 
@@ -146,7 +147,9 @@ function App() {
 
   return (
     <div>
-      <div className="mb-5"></div>
+      <div className="mb-5">
+        <ExpenseForm/>
+      </div>
       <div className="mb-3">
         <ExpenseFilter selectedCategory={selectedCategory} onSelectCategory={(category) => setSelectedCategory(category)}/>
       </div>
