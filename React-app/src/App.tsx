@@ -146,6 +146,7 @@ function App() {
 
   return (
     <div>
+      <div className="mb-5"></div>
       <div className="mb-3">
         <ExpenseFilter selectedCategory={selectedCategory} onSelectCategory={(category) => setSelectedCategory(category)}/>
       </div>
