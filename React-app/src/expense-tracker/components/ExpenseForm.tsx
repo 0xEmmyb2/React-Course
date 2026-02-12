@@ -11,6 +11,7 @@ const ExpenseForm = () => {
         <label htmlFor="amount" className="form-label">Amount</label>
         <input id="amount" type="number" className="form-control" />
       </div>
+      <div className="mb-3"><label htmlFor="" className="form-label"></label><select name="" id="" className="form-select"></select></div>
     </form>
   );
 };
