@@ -2,7 +2,9 @@ import {useForm} from "react-hook-form";
 
 const ExpenseForm = () => {
   return (
-    <div>ExpenseForm</div>
+    <form>
+        .mb-3
+    </form>
   )
 }
 
