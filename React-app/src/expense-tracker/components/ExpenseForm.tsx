@@ -16,7 +16,7 @@ const FormData = () => {
     register,
     handleSubmit,
     formState: {errors},
-  } = useForm<ExpenseFormData>
+  } = useForm<ExpenseFormData>({ resolver: zodResolver(schema), mode: "onChange"})
 }
 
 
