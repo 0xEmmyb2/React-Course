@@ -15,14 +15,19 @@ const FormData = () => {
   const{
     register,
     handleSubmit,
-    formState: {errors},
+    reset,
+    formState: { errors },
   } = useForm<ExpenseFormData>({ resolver: zodResolver(schema), mode: "onChange"})
 }
 
+const onSubmit = (data: ExpenseFormData) => {
+  console.log("Submitted expenses: ", data);
+  reset();
+}
 
 const ExpenseForm = () => {
   return (
-    <form>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="mb-3">
         <label htmlFor="description" className="form-label">
           Description
