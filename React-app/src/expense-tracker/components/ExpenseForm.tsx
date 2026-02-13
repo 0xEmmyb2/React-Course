@@ -16,7 +16,7 @@ const FormData = () => {
     register,
     handleSubmit,
     formState: {errors},
-  } = useForm
+  } = useForm<ExpenseFormData>
 }
 
 
