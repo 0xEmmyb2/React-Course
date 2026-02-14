@@ -36,14 +36,14 @@ const onSubmit = (data: ExpenseFormData) => {
         <label htmlFor="description" className="form-label">
           Description
         </label>
-        <input id="description" type="text" className="form-control" {...register("description")} />
+        <input id="description" type="text" className={`form-control ${errors.description ? "is-invalid" : ""}`} {...register("description")} />
         {errors.description && <p className="text-danger">{errors.description.message}</p>}
       </div>
       <div className="mb-3">
         <label htmlFor="amount" className="form-label">
           Amount
         </label>
-        <input id="amount" type="number" className="form-control" {...register("amount", {valueAsNumber: true})}/>
+        <input id="amount" type="number" className={`form-control ${errors.amount ? "is-invalid" : ""}`} {...register("amount", {valueAsNumber: true})}/>
         {errors.amount && <p className="text-danger">{errors.amount.message}</p>}
       </div>
       <div className="mb-3">
