@@ -36,7 +36,7 @@ const onSubmit = (data: ExpenseFormData) => {
         <label htmlFor="description" className="form-label">
           Description
         </label>
-        <input id="description" type="text" className="form-control" />
+        <input id="description" type="text" className="form-control" {...register("description")} />
       </div>
       <div className="mb-3">
         <label htmlFor="amount" className="form-label">
