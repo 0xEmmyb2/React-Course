@@ -6,8 +6,9 @@ import { useForm } from "react-hook-form";
 const schema = z.object({
   description: z.string().min(1, { message: "Description is required" }),
   amount: z
-    .number({ invalid_type_error: "Amount is required" })
-    .positive({ message: "Amount must be greater than 0." }),
+  .string()
+  .min(1, {message : "Amount is required"})
+  .refine
   category: z.string().min(1, { message: "Category is required" }),
 });
 
